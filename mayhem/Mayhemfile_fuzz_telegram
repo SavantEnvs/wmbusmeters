@@ -1,0 +1,9 @@
+project: savantenvs/wmbusmeters
+target: fuzz_telegram
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_telegram/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_telegram
+    libfuzzer: true
+    timeout: 10
