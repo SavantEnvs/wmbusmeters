@@ -1,0 +1,9 @@
+project: savantenvs/wmbusmeters
+target: fuzz_difvif
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_difvif/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_difvif
+    libfuzzer: true
+    timeout: 10
